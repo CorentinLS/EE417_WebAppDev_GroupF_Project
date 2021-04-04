@@ -40,16 +40,21 @@
 	<div class = "content">
 		<h2> Personal Information</h2>
 		<p>To get started, tell us about yourself.</p>
-		<p>First Name <input type="text"> Last Name <input type="text"></p>
-		<p>Email Address <input type="text"></p>
-		<p>
-			Date of Birth
-			<!-- When mouse focus on date, it will disappear, when it leave, it display again  -->
-			<input type="text" value="DD/MM/YYYY" 
-			onfocus="this.value=''" 
-			onblur="if(this.value==''){this.value='DD/MM/YYYY'}">	
-		</p>
+		
+		<form name="form" id="form" class="form"  method="POST" action="RegistrationServlet">
+			<p>First Name <input type="text" name="fname" required> Last Name <input type="text" name="lname" required></p>
+			<p>Email Address <input type="text" name="mail" required></p>
+			<p>
+				Date of Birth
+				<!-- When mouse focus on date, it will disappear, when it leave, it display again  -->
+				<input type="text" name="dateBirth" value="DD/MM/YYYY" 
+				onfocus="this.value=''" 
+				onblur="if(this.value==''){this.value='DD/MM/YYYY'}" required>	
+			</p>
+			<input id = "btnContinue" type="submit" value="Submit">
+		</form>
 	</div>
+	
 	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='registerPage.jsp'">
 	<input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='mobilePhoneNumber.jsp'">
 

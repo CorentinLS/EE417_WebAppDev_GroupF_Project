@@ -48,26 +48,30 @@
 	       send cards to residential addresses.</p>
 	 
 		<!-- use my location -->
-		<p>House Number <input type="text"> Street Name <input type="text"></p>
-		<p>		
-			<!-- When mouse focus on date, it will disappear, when it leave, it display again  -->
-			<input id = "address" type="text" value="Postcode" 
-			onfocus="this.value=''" 
-			onblur="if(this.value==''){this.value='Postcode'}">
-			
-			<input id = "address" type="text" value="City" 
-			onfocus="this.value=''" 
-			onblur="if(this.value==''){this.value='City'}">		
+		<form name="form" id="form" class="form"  method="POST" action="RegistrationServlet">
+			<p>House Number <input type="text" name = "houseNum" required> Street Name <input type="text" name = "streetName" required></p>
 		
-			<input id = "address" type="text" value="Country" 
-			onfocus="this.value=''" 
-			onblur="if(this.value==''){this.value='Country'}">	
-		</p>
-		<p>
-			<input id = "additionalInformation" type="text" value="Additional Information" 
-			onfocus="this.value=''" 
-			onblur="if(this.value==''){this.value='Additional Information'}">		
-		</p>
+			<p>		
+				<!-- When mouse focus on date, it will disappear, when it leave, it display again  -->
+				<input name="address1" id = "address" type="text" value="Postcode" 
+				onfocus="this.value=''" 
+				onblur="if(this.value==''){this.value='Postcode'}" required>
+				
+				<input name="addresse2" id = "address" type="text" value="City" 
+				onfocus="this.value=''" 
+				onblur="if(this.value==''){this.value='City'}" required>		
+			
+				<input name="address3" id = "address" type="text" value="Country" 
+				onfocus="this.value=''" 
+				onblur="if(this.value==''){this.value='Country'}" required>	
+			</p>
+			<p>
+				<input name = "addInfo" id = "additionalInformation" type="text" value="Additional Information" 
+				onfocus="this.value=''" 
+				onblur="if(this.value==''){this.value='Additional Information'}" required>		
+			</p>
+			<input id = "btnContinue" type="submit" value="Submit">
+		</form>
 	</div>
 	
 	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='mobilePhoneNumber.jsp'">

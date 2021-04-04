@@ -47,8 +47,12 @@
 	<div class = "content">
 		<h2>Create Password</h2>
 		<p>Please enter your password</p>
- 		<input type="password" id="pwd" placeholder="Create your password"/>
-            <i class="fa fa-eye" onclick="showhide()" id="eye"></i>
+		
+		<form name="form" id="form" class="form"  method="POST" action="RegistrationServlet">
+ 			<input type="password" id="pwd" name="password" placeholder="Create your password"/>
+            	<i class="fa fa-eye" onclick="showhide()" id="eye"></i>
+            <input id = "btnContinue" type="submit" value="Submit">
+        </form>
 
 		<!-- javascript about enter a password -->
         <script type="text/javascript">
