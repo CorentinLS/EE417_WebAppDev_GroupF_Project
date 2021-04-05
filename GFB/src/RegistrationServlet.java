@@ -31,7 +31,7 @@ public class RegistrationServlet extends HttpServlet {
         // Setup the database parameters
         String JDBCUrl = "jdbc:mysql://localhost:3306/gfb_database";
         String username = "root";
-        String password = "19991217Clsl31A"; //insert your root password between "" 
+        String password = ""; //insert your root password between "" 
 
         try {
             System.out.println("\nConnecting to the SSD Database......");
